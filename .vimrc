@@ -1,10 +1,11 @@
-"Plugins
+"Plugins, install by running vim +PlugInstall +qall
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Badacadabra/vim-archery'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Shortcuts
@@ -20,16 +21,16 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set termguicolors
+set encoding=UTF-8
+set guifont=Hack\ Nerd\ Font\ 9
 syntax on
+filetype plugin indent on
+let g:rustfmt_autosave = 1 "automatic :RustFmt when saving a buffer
 colorscheme archery
 let g:airline_theme = 'archery'
 "
 " Close vim after all documents are closed instead of leaving NerdTree open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-"set encoding for devicons
-set encoding=UTF-8
-set guifont=Hack\ Nerd\ Font\ 9
 
 " air-line
 let g:airline_powerline_fonts = 1 
