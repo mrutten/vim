@@ -28,7 +28,7 @@ syntax on
 filetype plugin indent on
 let g:rustfmt_autosave = 1 "automatic :RustFmt when saving a buffer
 colorscheme monokai
-"let g:airline_theme = 'monokai'
+let g:airline_theme = 'molokai'
 "
 " Close vim after all documents are closed instead of leaving NerdTree open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
