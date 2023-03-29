@@ -5,7 +5,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 "Plug 'Badacadabra/vim-archery'
-Plug 'crusoexia/vim-monokai'
+"Plug 'crusoexia/vim-monokai'
+Plug 'nordtheme/vim'
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
@@ -27,8 +28,8 @@ set guifont=Hack\ Nerd\ Font\ 9
 syntax on
 filetype plugin indent on
 let g:rustfmt_autosave = 1 "automatic :RustFmt when saving a buffer
-colorscheme monokai
-let g:airline_theme = 'molokai'
+colorscheme nord
+let g:airline_theme = 'nord'
 "
 " Close vim after all documents are closed instead of leaving NerdTree open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
