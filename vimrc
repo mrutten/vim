@@ -5,7 +5,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nordtheme/vim'
-Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Shortcuts
