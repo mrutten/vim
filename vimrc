@@ -2,13 +2,11 @@
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nordtheme/vim'
 call plug#end()
 
 " Shortcuts
-map <F2> :NERDTreeToggle<CR>
 map <F3> :set invnumber<CR>:set invrelativenumber<CR>
   
 " Settings
@@ -27,9 +25,6 @@ filetype plugin indent on
 let g:rustfmt_autosave = 1 "automatic :RustFmt when saving a buffer
 colorscheme nord
 let g:airline_theme = 'nord'
-"
-" Close vim after all documents are closed instead of leaving NerdTree open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " air-line
 let g:airline_powerline_fonts = 1 

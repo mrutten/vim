@@ -7,8 +7,6 @@
   * [vim-plug](#vim-plug)
   * [Nerd-fonts](#nerd-fonts)
 - [.vimrc](#vimrc)
-- [Plugin installation](#plugin-installation-1)
-- [Notes](#notes)
 
 <!-- tocstop -->
 
@@ -30,7 +28,6 @@ After Vim-plug is installed, the other plugins can be easily installed.
 
 - vim-airline: lean & mean status/tabline
 - vim-airline-themes: a collection of themes for vim-airline
-- NerdTree: a tree explorer plugin for vim
 - vim-devicons: adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
 
 ## Nerd-fonts 
@@ -48,12 +45,4 @@ git clone https://github.com/mrutten/vim.git
 cd vim
 cp vimrc ~/.vimrc
 vim +PlugInstall +qall
-```
-
-# Notes
-
-Navigation through Nerdtree can be done using the standard vim shortcuts.
-
-```
-CTRL+W-[h|j|k|l]
 ```
