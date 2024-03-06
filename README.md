@@ -1,6 +1,20 @@
+# Table of Contents
+
+<!-- toc -->
+
+- [Introduction](#introduction)
+- [Plugin installation](#plugin-installation)
+  * [vim-plug](#vim-plug)
+  * [Nerd-fonts](#nerd-fonts)
+- [.vimrc](#vimrc)
+- [Plugin installation](#plugin-installation-1)
+- [Notes](#notes)
+
+<!-- tocstop -->
+
 # Introduction
 
-Vim installation riced to turn it into a code editor.
+Vimrc with a few plugins.
 
 # Plugin installation
 
@@ -19,24 +33,10 @@ After Vim-plug is installed, the other plugins can be easily installed.
 - NerdTree: a tree explorer plugin for vim
 - vim-devicons: adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
 
-## vim-devicons
+## Nerd-fonts 
 
 ```bash
-mkdir -p ~/.local/share/fonts/NerdFonts
-curl -Lso Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hack.zip
-unzip Hack.zip -d ~/.local/share/fonts/NerdFonts
-```
-
-Clear and regenerate your font cache and indexes with the following command:
-
-```bash
-fc-cache -f -v
-```
-
-You can confirm that the fonts are installed with the following command:
-
-```bash
-fc-list | grep "Hack"
+sudo pacman -S ttf-hack-nerd
 ```
 
 # .vimrc
@@ -44,26 +44,16 @@ fc-list | grep "Hack"
 Download vimrc and copy it into home directory.
 
 ```bash
-git clone https://gitlab.com/mrutten/vim
+git clone https://github.com/mrutten/vim.git
 cd vim
-cp .vimrc ~
-```
-
-***Note: some symbols might not render properly in the browser, but if the fonts installed correctly, the symbols will render in Vim.***
-
-Install the plugins.
-
-```bash
+cp vimrc ~/.vimrc
 vim +PlugInstall +qall
 ```
 
-# miscellaneous notes
+# Notes
 
 Navigation through Nerdtree can be done using the standard vim shortcuts.
 
 ```
 CTRL+W-[h|j|k|l]
 ```
-
-In visual mode, hold shift when selecting text to copy the buffer outside of vim to another program.
-
