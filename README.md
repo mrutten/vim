@@ -1,28 +1,23 @@
 # Table of Contents
 
-<!-- toc -->
+<!-- vim-markdown-toc GFM -->
 
-- [Introduction](#introduction)
-- [Plugin installation](#plugin-installation)
-  * [vim-plug](#vim-plug)
+* [Plugin installation](#plugin-installation)
 
-<!-- tocstop -->
-
-# Introduction
-
-Vimrc with a few plugins.
+<!-- vim-markdown-toc -->
 
 # Plugin installation
-
-## vim-plug
 
 [Vim-plug](https://github.com/junegunn/vim-plug) is a minimalist Vim plugin manager.
 
 After Vim-plug is installed, the other plugins can be easily installed.
 
+- catppuccin: dark theme
+- nord: dark theme
 - vim-airline: lean & mean status/tabline
 - vim-airline-themes: a collection of themes for vim-airline
-- vim-devicons: adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
+- vim-devicons: adds file type icons to Vim plugins
+- vim-markdown-toc: Create table of contents for markdown files
 
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
