@@ -5,6 +5,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nordtheme/vim'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
 " Shortcuts
@@ -30,8 +31,8 @@ set encoding=UTF-8
 set guifont=Hack\ Nerd\ Font\ 9
 
 "Syntax Highlighting
-filetype plugin indent on
 syntax on
+filetype plugin indent on
 
 "Nord Colorscheme
 "colorscheme nord
@@ -78,3 +79,4 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.dirty='⚡'
+
