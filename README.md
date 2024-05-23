@@ -19,10 +19,24 @@ After Vim-plug is installed, the other plugins can be easily installed.
 - vim-devicons: adds file type icons to Vim plugins
 - vim-markdown-toc: Create table of contents for markdown files
 
+Install prerequisite packages.
+
+```bash
+# Debian
+sudo apt install curl git
+
+# Arch
+sudo pacman -S curl git
+```
+
+Clone vimrc and install plugins
+
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 git clone https://github.com/mrutten/vim.git
 cd vim
 cp vimrc ~/.vimrc
 vim +PlugInstall +qall
+cd ..
+rm -rf vim
 ```
