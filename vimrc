@@ -49,3 +49,5 @@ let g:airline_theme = 'catppuccin_mocha'
 "air-line
 let g:airline_powerline_fonts = 1 
 
+"vim-markdown-toc autoupdate on save, default is 1
+let g:vmt_auto_update_on_save = 1
