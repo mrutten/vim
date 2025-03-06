@@ -12,13 +12,16 @@ call plug#end()
 " map space to default leader so showcmd works
 map <space> \
 nnoremap <leader>e :e .<CR>
+nnoremap <C-_> :term<CR>
 nnoremap <leader>n :set number! relativenumber!<CR>
 nnoremap <leader>l :set list!<CR>
 nnoremap <leader>h :nohlsearch<CR>
+nnoremap <leader>" :registers<CR>
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
 vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
+
 
 "Settings
 set clipboard=unnamed,unnamedplus
