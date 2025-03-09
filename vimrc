@@ -6,25 +6,31 @@ Plug 'nordtheme/vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 "Mappings
 " map space to default leader so showcmd works
 map <space> \
 nnoremap <leader>e :e .<CR>
-nnoremap <C-_> :term<CR>
+" Reload vimrc configuration changes, noh prevents highlight from triggering
+ noremap <leader>r :so $MYVIMRC \| noh<CR>
+" Terminal, CTRL /
+nnoremap <C-_> :ter<CR>
 nnoremap <leader>n :set number! relativenumber!<CR>
+" Toggle invisible characters
 nnoremap <leader>l :set list!<CR>
-nnoremap <leader>h :nohlsearch<CR>
-nnoremap <leader>" :registers<CR>
+" Clear search highlighting
+nnoremap <leader>h :noh<CR>
+
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
 vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
-
 "Settings
 set clipboard=unnamed,unnamedplus
+set cursorline "kighlight the text line of the cursor with CursorLine |hl-CursorLine|.
 set expandtab "Use the appropriate number of spaces to insert a <Tab>
 set hlsearch "When there is a previous search pattern, highlight all its matches
 set incsearch "While typing a search command, show where the pattern, as it was typed so far, matches
@@ -44,13 +50,20 @@ filetype plugin indent on
 syntax on
 
 "Colorschemes
-"colorscheme nord
-"let g:airline_theme = 'nord'
 colorscheme catppuccin_mocha
-let g:airline_theme = 'catppuccin_mocha'
+" Reference "Palette" section on https://github.com/catppuccin/catppuccin for color codes
+" Overriding some components
+" Relative and active line numbers
+highlight LineNr guifg=#9399b2
+" Current line number
+highlight CursorLineNr guifg=#bac2de
+" Comment color
+highlight Comment guifg=#f9e2af
 
-"air-line
+" Airline
+let g:airline_theme = 'catppuccin_mocha'
 let g:airline_powerline_fonts = 1 
 
-"vim-markdown-toc autoupdate on save, default is 1
+"vim-markdown-toc
 let g:vmt_auto_update_on_save = 1
+
